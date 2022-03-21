@@ -1,0 +1,24 @@
+>>> TOOLS <<<
+    My frequently used cli tools.
+    All tool names are package names or commands.
+
+
+light - Set/get screen brightness(backlight). Use with sudo or set elevated privilages with chmod.
+
+NetworkManager - Network connection manager and user applications(wifi, ethernet, connections)
+    |-nmcli - CLI interface
+    |-nmtui - curses based terminal UI
+
+wifi - Turn internal wifi device on/off
+bluetooth - Turn bluetooth on/off
+    (type "man wifi" to see more of this tool set)
+
+xbindkeys - identify or map keyboard keys
+
+pulseaudio - general purpose sound server (I used for volume control)
+
+playerctl - media player controller (pause,play music etc; bind to keys)
+
+mc (Midnight Commander) - TUI dual pane File explorer
+
+shotwell - lightweight image manager(viewer)
