@@ -22,7 +22,7 @@ export EDITOR='nvim'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # clear and put promt at the bottom
-alias cls="clear;printf '\n%.0s' {1..100}"
+alias cls="clear;printf '\n%.0s' {1..50}"
 
 # find a file and open it in nvim
 alias nvimf="nvim \$(find ~ | fzf)"
@@ -37,7 +37,7 @@ alias brightness="xrandr --output eDP-1 --brightness"
 alias ll="ls -A --group-directories-first"
 
 # cd and ls
-function cs () {
+function cl () {
     cd "$@" && ls -A --group-directories-first
 }
 
@@ -45,6 +45,12 @@ function cs () {
 # export ROS_DOMAIN_ID=42
 # source /opt/ros2/galactic/setup.zsh
 
+# changing the $SHELL enviroment bariable from /bin/bash to /bin/zsh
+export SHELL=/bin/zsh
+
+# do not show warnings at startup
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 # Putting the promt at the bottom
-printf '\n%.0s' {1..100}
+printf '\n%.0s' {1..50}
 
