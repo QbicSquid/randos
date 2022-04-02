@@ -22,3 +22,8 @@ playerctl - media player controller (pause,play music etc; bind to keys)
 mc (Midnight Commander) - TUI dual pane File explorer
 
 shotwell - lightweight image manager(viewer)
+
+mariaDB - official SQL databse for arch (works as a drop-in replacement for mySQL)
+mycli - a CLI frontend for mySQL and mariaDB and more
+pspg - a pager (like less) that displays tables nicely. used with mycli
+

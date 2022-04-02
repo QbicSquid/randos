@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--simple xml file for an Ant build tool, to compile java projects-->
+<project name="antProject" default="info">
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="bin"/>
+
+    <path id="master-classpath">
+        <!--<fileset dir="${web.dir}/WEB-INF/lib">-->
+        <!--    <include name="*.jar"/>-->
+        <!--</fileset>-->
+        <pathelement path="${build.dir}"/>
+    </path>
+
+    <target name="info">
+        <echo>Project Name: ${ant.project.name}</echo>
+    </target>
+
+    <target name="build" description="Compile source tree java files">
+        <mkdir dir="${build.dir}"/>
+        <javac destdir="${build.dir}" debug="false" deprecation="false"
+            optimize="false" failonerror="true" includeantruntime="false"
+            source="17" target="17">
+
+            <src path="${src.dir}"/>
+            <classpath refid="master-classpath"/>
+        </javac>
+    </target>
+</project>
