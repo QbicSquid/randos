@@ -250,15 +250,21 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 
-# Set wallpaper on startup
-exec --no-startup-id nitrogen --set-auto ~/Pictures/Wallpapers/1366x768-dark-archlinux2.png
-
 # copying dotfiles to the repo folder, if the dot files are newer
-exec /bin/cp -u ~/.zshrc ~/Documents/randos/dotfiles/
-exec /bin/cp -u ~/.bashrc ~/Documents/randos/dotfiles/
-exec /bin/cp -u ~/.alacritty.yml ~/Documents/randos/dotfiles/
-exec /bin/cp -u ~/.vim/vimrc ~/Documents/randos/dotfiles/.vim/
-exec /bin/cp -u ~/.config/i3/config ~/Documents/randos/dotfiles/.config/i3/
-exec /bin/cp -u ~/.config/i3status/config ~/Documents/randos/dotfiles/.config/i3status/
-exec /bin/cp -u ~/.config/mc/* ~/Documents/randos/dotfiles/.config/mc/
-exec /bin/cp -u ~/.local/bin/i3exit ~/Documents/randos/dotfiles/.local/bin/i3exit
+exec --no-startup-id /bin/cp -u ~/.zshrc ~/Documents/randos/dotfiles/
+exec --no-startup-id /bin/cp -u ~/.bashrc ~/Documents/randos/dotfiles/
+exec --no-startup-id /bin/cp -u ~/.alacritty.yml ~/Documents/randos/dotfiles/
+exec --no-startup-id /bin/cp -u ~/.vim/vimrc ~/Documents/randos/dotfiles/.vim/
+exec --no-startup-id /bin/cp -u ~/.config/i3/config ~/Documents/randos/dotfiles/.config/i3/
+exec --no-startup-id /bin/cp -u ~/.config/i3status/config ~/Documents/randos/dotfiles/.config/i3status/
+
+exec --no-startup-id /bin/cp -u ~/.config/mc/ini ~/Documents/randos/dotfiles/.config/mc/ini
+exec --no-startup-id /bin/cp -u ~/.config/mc/mc.ext ~/Documents/randos/dotfiles/.config/mc/mc.ext
+exec --no-startup-id /bin/cp -u ~/.config/mc/mc.keymap ~/Documents/randos/dotfiles/.config/mc/mc.keymap
+exec --no-startup-id /bin/cp -u ~/.config/mc/menu ~/Documents/randos/dotfiles/.config/mc/menu
+exec --no-startup-id /bin/cp -u ~/.config/mc/panels.ini ~/Documents/randos/dotfiles/.config/mc/panels.ini
+
+exec --no-startup-id /bin/cp -u ~/.local/bin/i3exit ~/Documents/randos/dotfiles/.local/bin/i3exit
+
+# Set wallpaper on startup
+exec --no-startup-id nitrogen --set-auto ~/Pictures/Wallpapers/WALL.png
