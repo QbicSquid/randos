@@ -260,3 +260,4 @@ exec /bin/cp -u ~/.alacritty.yml ~/Documents/randos/dotfiles/
 exec /bin/cp -u ~/.vim/vimrc ~/Documents/randos/dotfiles/.vim/
 exec /bin/cp -u ~/.config/i3/config ~/Documents/randos/dotfiles/.config/i3/
 exec /bin/cp -u ~/.config/i3status/config ~/Documents/randos/dotfiles/.config/i3status/
+exec /bin/cp -u ~/.config/mc/ ~/Documents/randos/dotfiles/.config/
