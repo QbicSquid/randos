@@ -3,7 +3,8 @@
     All tool names are package names or commands.
 
 
-light - Set/get screen brightness(backlight). Use with sudo or set elevated privilages with chmod.
+light - Set/get screen brightness(backlight).
+    Use with sudo or set elevated privilages with chmod: sudo chmod u+s $(which light)
 
 NetworkManager - Network connection manager and user applications(wifi, ethernet, connections)
     |-nmcli - CLI interface
