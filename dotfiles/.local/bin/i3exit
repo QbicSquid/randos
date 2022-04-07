@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# script used for shutdown options in my i3 config
+# do on this file,
+# sudo chmod u+x,u+x i3exit
+lock() {
+    i3lock -i ~/Pictures/Wallpapers/1366x768-dark-archlinux2.png
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: i3exit {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0
