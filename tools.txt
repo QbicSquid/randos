@@ -1,5 +1,5 @@
 >>> TOOLS <<<
-    My frequently used cli tools.
+    My frequently used (mainly cli) tools.
     All tool names are package names or commands.
 
 
@@ -17,6 +17,7 @@ bluetooth - Turn bluetooth on/off
 xbindkeys - identify or map keyboard keys
 
 pulseaudio - general purpose sound server (I used for volume control)
+    then used both PulseAudio and ALSA
 
 playerctl - media player controller (pause,play music etc; bind to keys)
 
@@ -28,3 +29,11 @@ mariaDB - official SQL databse for arch (works as a drop-in replacement for mySQ
 mycli - a CLI frontend for mySQL and mariaDB and more
 pspg - a pager (like less) that displays tables nicely. used with mycli
 
+speedtest-cli - used to measure internet speed
+    install: pip install speedtest-cli
+    usage: speedtest --simple
+
+blueberry - bluetooth management tool. Made for Linux Mint, works on all distros.
+    bluedevil-sendfile, bluedevid-wizard are KDE's bluetooth tools. Also useful.
+
+envycontrol - an AUR package that can completely power off NVidia GPU, saving battery.

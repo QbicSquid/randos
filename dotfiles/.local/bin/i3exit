@@ -4,7 +4,7 @@
 # do on this file,
 # sudo chmod u+x,u+x i3exit
 lock() {
-    i3lock -i ~/Pictures/Wallpapers/1366x768-dark-archlinux2.png
+    i3lock -e -i ~/Pictures/Wallpapers/1920x1080-dark-archlinux2.png
 }
 
 case "$1" in

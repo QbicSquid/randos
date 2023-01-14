@@ -26,7 +26,13 @@ alias cls="clear;printf '\n%.0s' {1..50}"
 
 # find a file and open it in nvim
 alias nvimf="nvim \$(find ~ | fzf)"
+alias nvimfr="nvim \$(find / | fzf)"
 alias nvimfl="nvim \$(find . | fzf)"
+
+# find a path and cd into it
+alias cdf="cd \$(find ~ | fzf)"
+alias cdfr="cd \$(find / | fzf)"
+alias cdfl="cd \$(find . | fzf)"
 
 # change brightness; to use do "brightness x" where 0 < x < 1
 # NOTE: This only emulates brightness. To adjust screen backlight brightness,
