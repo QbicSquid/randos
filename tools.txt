@@ -34,6 +34,15 @@ speedtest-cli - used to measure internet speed
     usage: speedtest --simple
 
 blueberry - bluetooth management tool. Made for Linux Mint, works on all distros.
-    bluedevil-sendfile, bluedevid-wizard are KDE's bluetooth tools. Also useful.
+    bluedevil-sendfile, bluedevil-wizard are KDE's bluetooth tools. Also useful.
 
 envycontrol - an AUR package that can completely power off NVidia GPU, saving battery.
+
+cpupower - control processor frecuencies, enable or disable them etc
+
+fd - a better alternative to find
+fzf - fuzzy finder
+
+lazygit - amazing TUI git wrapper
+dooit - TUI todo tool
+
