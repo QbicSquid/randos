@@ -71,10 +71,16 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run -nb '#3c3836' -nf '#fbf1c7' -sb '#282828' -sf '#fe8019'
 # A more modern dmenu replacement is rofi:
-bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
+
+# rofi
+bindcode $mod+40 exec "rofi -modi drun,run -show drun"
+# rofi-greenclip clipboard management
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
+exec --no-startup-id greenclip daemon>/dev/null
+# greenclip daemon doesnt start on i3 restart
 
 # change focus
 bindsym $mod+h focus left
@@ -186,17 +192,22 @@ default_border pixel 0
 hide_edge_borders smart
 
 # set gaps
-gaps inner 0
+gaps inner 10
 
 # toggle gaps
 set $mode_gaps Toggle gaps: (1)on (2)off
 bindsym $mod+g mode "$mode_gaps"
 mode "$mode_gaps" {
-    bindsym 1 mode "default", gaps inner all set 14, [class=.*] border pixel 1
-    bindsym 2 mode "default", gaps inner all set 0, [class=.*] border pixel 0
+    # bindsym 1 mode "default", gaps inner all set 14, [class=.*] border pixel 1
+    # bindsym 2 mode "default", gaps inner all set 0, [class=.*] border pixel 0
+    bindsym 1 mode "default", gaps inner all set 10
+    bindsym 2 mode "default", gaps inner all set 0
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+# start picom
+exec --no-startup-id picom -b
 
 # set backlight brightness
 bindsym $mod+F11 exec --no-startup-id light -S 80, mode "default"
@@ -249,20 +260,23 @@ bindsym $mod+r mode "resize"
 # }
 
 # bar using i3status-rust
-bar {
-    font pango:DejaVu Sans Mono, FontAwesome 12
-    position top
-    status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
-    colors {
-        separator #666666
-        background #1d2021
-        statusline #dddddd
-        focused_workspace   #1d2021 #1d2021 #d65d0e
-        active_workspace    #1d2021 #1d2021 #ffffff
-        inactive_workspace  #1d2021 #1d2021 #888888
-        urgent_workspace    #2f343a #900000 #ffffff
-    }
-}
+# bar {
+#     font pango:DejaVu Sans Mono, FontAwesome 12
+#     position top
+#     status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
+#     colors {
+#         separator #666666
+#         background #1d2021
+#         statusline #dddddd
+#         focused_workspace   #1d2021 #1d2021 #d65d0e
+#         active_workspace    #1d2021 #1d2021 #ffffff
+#         inactive_workspace  #1d2021 #1d2021 #888888
+#         urgent_workspace    #2f343a #900000 #ffffff
+#     }
+# }
+
+# bar using polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Make the currently focused window a scratchpad
 bindsym $mod+Shift+p move scratchpad

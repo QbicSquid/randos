@@ -22,6 +22,8 @@ pulseaudio - general purpose sound server (I used for volume control)
 playerctl - media player controller (pause,play music etc; bind to keys)
 
 mc (Midnight Commander) - TUI dual pane File explorer
+lf - a better file explorer
+ctpv - a file previewer for lf
 
 shotwell - lightweight image manager(viewer)
 
@@ -45,4 +47,13 @@ fzf - fuzzy finder
 
 lazygit - amazing TUI git wrapper
 dooit - TUI todo tool
+
+xfreerdp - use microsft's remote desktop protocol and establish connections
+mongosh - mongoBD CLI client. all mongodb stuff are not in official repo's anymore (legal reasons)
+
+rofi - launcher
+rofi-greenclip - clipboard manager to be used with rofi
+
+picom - compositor
+https://github.com/pijulius/picom - the fork I'm using, this adds animations
 
