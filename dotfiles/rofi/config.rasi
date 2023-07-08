@@ -1,0 +1,85 @@
+@theme "gruvbox-dark"
+
+* {
+    white : rgb(197, 200, 198);
+    yellow: rgb(240, 198, 116);
+    grey  : rgb(40, 42, 46);
+    black : rgb(29, 32, 33);
+
+    background-color: @grey;
+}
+
+configuration {
+    font: "monospace 12";
+}
+
+entry {
+    text-color: @white;
+}
+
+prompt {
+    text-color: @white;
+}
+
+window {
+    border          : 0px 2px 2px 2px;
+    border-radius   : 0px 0px 16px 16px;
+    border-color    : @yellow;
+    padding         : 8px 16px 16px 16px;
+    margin          : 37px 0px 0px 0px;
+    location        : north;
+    background-color: @grey;
+}
+
+scrollbar {
+    handle-color: @white;
+    handle-width: 2px;
+}
+
+listview {
+    border-color: @white;
+}
+
+element {
+    orientation: horizontal;
+    children   : [ element-text, element-icon ];
+    spacing    : 5px;
+}
+
+
+element normal.normal {
+    background-color: @grey;
+    text-color:       @yellow;
+}
+element normal.urgent {
+    background-color: @grey;
+    text-color:       @yellow;
+}
+element normal.active {
+    background-color: @grey;
+    text-color:       @yellow;
+}
+element selected.normal {
+    background-color: @black;
+    text-color:       @white;
+}
+element selected.urgent {
+    background-color: @black;
+    text-color:       @white;
+}
+element selected.active {
+    background-color: @black;
+    text-color:       @white;
+}
+element alternate.normal {
+    background-color: @grey;
+    text-color:       @yellow;
+}
+element alternate.urgent {
+    background-color: @grey;
+    text-color:       @yellow;
+}
+element alternate.active {
+    background-color: @grey;
+    text-color:       @yellow;
+}

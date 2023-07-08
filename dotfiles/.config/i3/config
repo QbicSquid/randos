@@ -329,5 +329,10 @@ exec --no-startup-id /bin/cp -u ~/.config/mc/panels.ini ~/Documents/randos/dotfi
 
 exec --no-startup-id /bin/cp -u ~/.local/bin/i3exit ~/Documents/randos/dotfiles/.local/bin/i3exit
 
+exec --no-startup-id /bin/cp -u ~/.config/picom/picom.conf ~/Documents/randos/dotfiles/picom/
+exec --no-startup-id /bin/cp -u ~/.config/rofi/config.rasi ~/Documents/randos/dotfiles/rofi/
+exec --no-startup-id /bin/cp -u ~/.config/polybar/* ~/Documents/randos/dotfiles/polybar/
+exec --no-startup-id /bin/cp -u ~/.config/lf/lfrc ~/Documents/randos/dotfiles/lf/
+
 # Set wallpaper on startup
 exec --no-startup-id nitrogen --set-auto ~/Pictures/Wallpapers/WALL.png
